@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wikipedia</title>
+</head>
+<style>
+    .container{
+        margin: 0 auto;
+        text-align: center;
+    }
+    #searchValue{
+        width: 80%;
+        height: 40px;
+        border: 1px solid black;
+        font-size: 24px;
+        font-family: cursive;
+        padding: 10px;
+        color: rgb(18, 104, 135) ;
+    }
+    h1{
+        color: rgb(18, 104, 135);
+    }
+    #SearchBtn{
+        width: 20%;
+        height: 50px;
+        border: 1 px solid rgb(28, 28, 67);
+        font-size: 23px;
+        padding: 10px;
+        color: white;
+        background-color:  rgb(18, 104, 135);
+    }
+    #result{
+        width: 80%;
+        height: 40px;
+        padding: 10px;
+        font-size: 24px;
+        margin: 0 auto;
+        text-align: center;
+        margin-top: 20px;
+        color:  rgb(18, 104, 135);
+    }
+</style>
+<body>
+    <div class="container">
+        <h1> Wikipedia Search</h1>
+        <input type="text" id="searchValue" value=""/>
+        <br><br/>
+        <input type="button" id="SearchBtn" value="search" onclick="searchResult()"/>
+        <p id="result"></p>
+
+    </div>
+    <script>
+        function searchResult(){
+            var searchValue = document.getElementById("searchValue");
+            var p = document.getElementById("result");
+            setTimeout(()=>{
+                p.innerHTML = "User search result are :" + searchValue.value;
+            },1000)
+        }
+    </script>
+</body>
+</html>
